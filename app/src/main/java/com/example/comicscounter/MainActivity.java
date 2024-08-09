@@ -41,8 +41,6 @@ public class MainActivity extends AppCompatActivity {
         editor.apply();
 
         printEverything();
-
-//        Plus_Button plus_button = new Plus_Button();
     }
 
     @Override
@@ -58,11 +56,12 @@ public class MainActivity extends AppCompatActivity {
         printMin();
         printMax();
         printArray();
+        printButton();
     }
 
     protected void printText(TextView tv, int corx, int cory) {
-        tv.setX(corx);
-        tv.setY(cory);
+//        tv.setX(corx);
+//        tv.setY(cory);
         tv.setVisibility(View.VISIBLE);
     }
 
@@ -124,6 +123,12 @@ public class MainActivity extends AppCompatActivity {
             array_text.append(String.valueOf(array[0]));
         }
         catch (ArrayIndexOutOfBoundsException ignored) {}
+    }
+
+    protected void printButton(){
+        Plus_Button plus_button = new Plus_Button();
+
+//        plus_button.setY(400);
     }
 
     protected void add1ToToday(){

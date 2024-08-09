@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -15,6 +14,7 @@
             android:layout_height="wrap_content"
             android:gravity="start"
             android:text="@string/date"
+            android:textSize="30sp"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -23,7 +23,9 @@
             android:layout_height="wrap_content"
             android:gravity="start"
             android:text="@string/today"
-            tools:ignore="MissingConstraints" />
+            android:textSize="30sp"
+            tools:ignore="MissingConstraints"
+            android:layout_below="@+id/date"/>
 
         <TextView
             android:id="@+id/total"
@@ -31,7 +33,9 @@
             android:layout_height="wrap_content"
             android:gravity="start"
             android:text="@string/total"
-            tools:ignore="MissingConstraints" />
+            android:textSize="30sp"
+            tools:ignore="MissingConstraints"
+            android:layout_below="@+id/today"/>
 
         <TextView
             android:id="@+id/min"
@@ -39,7 +43,9 @@
             android:layout_height="wrap_content"
             android:gravity="start"
             android:text="@string/min"
-            tools:ignore="MissingConstraints" />
+            android:textSize="30sp"
+            tools:ignore="MissingConstraints"
+            android:layout_below="@+id/total"/>
 
         <TextView
             android:id="@+id/max"
@@ -47,21 +53,27 @@
             android:layout_height="wrap_content"
             android:gravity="start"
             android:text="@string/max"
-            tools:ignore="MissingConstraints" />
+            android:textSize="30sp"
+            tools:ignore="MissingConstraints"
+            android:layout_below="@+id/min"/>
         <TextView
             android:id="@+id/array"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="start"
             android:text="@string/array"
-            tools:ignore="MissingConstraints" />
+            android:textSize="30sp"
+            tools:ignore="MissingConstraints"
+            android:layout_below="@+id/max"/>
 
-<!--        <Button-->
-<!--            android:id="@+id/plus_button"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@string/plus"-->
-<!--            android:textSize="1000sp"-->
-<!--            tools:ignore="MissingConstraints"/>-->
-    </LinearLayout>
+        <Button
+            android:id="@+id/plus_button"
+            android:layout_below="@+id/array"
+            android:layout_centerHorizontal="true"
+            android:text="@string/plus"
+            android:textSize="100sp"
+            android:textAlignment="center"
+            android:layout_height="200dp"
+            android:layout_width="200dp"/>
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
