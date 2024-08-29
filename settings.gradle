@@ -1,3 +1,8 @@
+include 'project-without-directory'
+project(":project-without-directory").projectDir.mkdirs()
+
+
+
 pluginManagement {
     repositories {
         gradlePluginPortal()
