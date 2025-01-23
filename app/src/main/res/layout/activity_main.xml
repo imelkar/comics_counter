@@ -14,6 +14,7 @@
             android:layout_height="wrap_content"
             android:gravity="start"
             android:text="@string/date"
+            android:paddingTop="120dp"
             android:textSize="30sp"
             tools:ignore="MissingConstraints" />
 
