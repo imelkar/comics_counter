@@ -43,21 +43,19 @@ public class MainActivity extends AppCompatActivity {
 
         printEverything();
 
-        Button plus_button = new Button(this);
+        Button plus_button = findViewById(R.id.plus_button);
 
-        plus_button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                SharedPreferences sharedPreferences1 = PreferenceManager.getDefaultSharedPreferences(cc);
-                int today = sharedPreferences1.getInt("today", 0);
+        plus_button.setOnClickListener(v -> {
+            SharedPreferences sharedPreferences1 = PreferenceManager.getDefaultSharedPreferences(cc);
+            int today = sharedPreferences1.getInt("today", 0);
 
-                SharedPreferences.Editor editor1 = sharedPreferences1.edit();
+            SharedPreferences.Editor editor1 = sharedPreferences1.edit();
 
-                editor1.putInt("today", today + 1);
-                editor1.apply();
-                System.out.println("Button clicked");
+            editor1.putInt("today", today + 1);
+            editor1.apply();
+            System.out.println("Button clicked");
 
-                printToday();
-            }
+            printToday();
         });
     }
 
